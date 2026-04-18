@@ -128,17 +128,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer z-10"
-        onClick={() => scrollTo("#about")}
-      >
-        <span className="text-slate-400 text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-slate-400 to-transparent animate-bounce"></div>
-      </motion.div>
     </section>
   );
 }
