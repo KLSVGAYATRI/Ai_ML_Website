@@ -51,11 +51,18 @@ export default function About() {
               <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-5 text-slate-900">
                 About Pixelwind Technologies
               </h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-5">
-                Pixelwind Technologies is a leading AI/ML education and internship company dedicated to making artificial intelligence careers accessible to every ambitious student. Founded by industry professionals from top tech companies, we combine rigorous curriculum with hands-on project experience.
+              <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-3 py-1 mb-5">
+                <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                <span className="text-green-700 text-xs font-semibold">ISO 9001:2015 Certified</span>
+              </div>
+              <p className="text-slate-600 text-base leading-relaxed mb-4">
+                Pixelwind Technologies (PW) was established in 2021 and is an ISO 9001:2015 certified company with a vision to be the recognized leader in providing reliable business solutions worldwide for superior business results in Information Technology and ITES.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-8">
-                Our programs are designed in partnership with hiring companies, ensuring you learn exactly what the industry demands. From your first Python script to deploying production AI models — we guide you every step of the way.
+              <p className="text-slate-600 text-base leading-relaxed mb-4">
+                Our services include Training, Development and Staffing (Technical & Non-Technical) to empanelled organizations to give the best productivity based on their needs. We have an exclusive team to deliver services from our respective branches. We are specialists in providing world class skill training, Job Fairs, Placement after successful training, and Post Placement Support.
+              </p>
+              <p className="text-slate-600 text-base leading-relaxed mb-8">
+                Apart from IT training and skill development programs for corporates, we also have trainers for sales, time management, interpersonal skills, customer service, and organizational communication — ensuring both candidates and companies achieve the expected results.
               </p>
               <div className="flex flex-wrap gap-4">
                 {highlights.map((h, i) => (
