@@ -69,7 +69,7 @@ export default function About() {
 
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-600 to-cyan-500 rounded-2xl p-8 text-white shadow-xl shadow-blue-200">
-                <div className="text-5xl font-extrabold mb-1">2019</div>
+                <div className="text-5xl font-extrabold mb-1">2021</div>
                 <div className="text-blue-100 text-sm mb-6">Founded in India</div>
                 <div className="grid grid-cols-2 gap-4">
                   {[

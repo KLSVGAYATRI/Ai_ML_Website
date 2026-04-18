@@ -32,14 +32,18 @@ export default function Hero({ onApply }: Props) {
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight">
-            Start Your<br />
+            Internship in<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              Career in AI & ML
+              Artificial Intelligence
+            </span>
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+              & Machine Learning
             </span>
           </h1>
 
           <p className="text-lg text-slate-300 max-w-md leading-relaxed">
-            Industry-ready internship with real projects. Transform from a graduate to an in-demand AI professional.
+            Pixelwind Technologies offers industry-grade AI/ML internships with real projects, expert mentors, and AICTE certification — designed to make you job-ready from day one.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-2">
