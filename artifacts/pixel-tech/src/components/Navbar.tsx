@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
+interface Props { onApply: () => void; }
+
 const navLinks = [
   { name: "About", href: "#about" },
   { name: "AI/ML", href: "#ai-ml" },
@@ -15,7 +17,7 @@ function scrollTo(id: string) {
   if (el) el.scrollIntoView({ behavior: "smooth" });
 }
 
-export default function Navbar() {
+export default function Navbar({ onApply }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -72,7 +74,7 @@ export default function Navbar() {
             </button>
           ))}
           <button
-            onClick={() => handleNav("#program")}
+            onClick={onApply}
             className="ml-3 px-5 py-2 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors shadow-sm"
           >
             Apply Now
@@ -107,7 +109,7 @@ export default function Navbar() {
               </button>
             ))}
             <button
-              onClick={() => handleNav("#program")}
+              onClick={() => { setMobileOpen(false); onApply(); }}
               className="mt-2 w-full py-2.5 rounded-lg bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-colors"
             >
               Apply Now

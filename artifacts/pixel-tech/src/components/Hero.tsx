@@ -6,7 +6,9 @@ function scrollTo(id: string) {
   if (el) el.scrollIntoView({ behavior: "smooth" });
 }
 
-export default function Hero() {
+interface Props { onApply: () => void; }
+
+export default function Hero({ onApply }: Props) {
   return (
     <section id="hero" className="relative min-h-[100dvh] flex items-center overflow-hidden bg-slate-950 pt-20">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-slate-950 z-0"></div>
@@ -42,7 +44,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4 mt-2">
             <button
-              onClick={() => scrollTo("#program")}
+              onClick={onApply}
               className="px-8 py-3.5 rounded-xl bg-blue-600 text-white font-semibold text-base hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/30 hover:shadow-blue-500/40 hover:-translate-y-0.5 active:translate-y-0"
             >
               Apply Now
@@ -58,12 +60,12 @@ export default function Hero() {
           <div className="flex items-center gap-6 pt-4 border-t border-white/10">
             <div className="text-center">
               <div className="text-2xl font-bold text-white">500+</div>
-              <div className="text-xs text-slate-400 mt-0.5">Students Trained</div>
+              <div className="text-xs text-slate-400 mt-0.5">Interns Trained</div>
             </div>
             <div className="w-px h-8 bg-white/10"></div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-white">3 Months</div>
-              <div className="text-xs text-slate-400 mt-0.5">Program Duration</div>
+              <div className="text-2xl font-bold text-white">2–6 Months</div>
+              <div className="text-xs text-slate-400 mt-0.5">Flexible Duration</div>
             </div>
             <div className="w-px h-8 bg-white/10"></div>
             <div className="text-center">
@@ -115,7 +117,7 @@ export default function Hero() {
               <div className="w-8 h-8 rounded-full bg-blue-500/60 border border-blue-300/60 shadow-[0_0_20px_rgba(59,130,246,1)]"></div>
             </div>
 
-            {/* Connecting lines (decorative) */}
+            {/* Connecting lines */}
             <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 100 100">
               <line x1="50" y1="50" x2="50" y2="3" stroke="#60a5fa" strokeWidth="0.5" />
               <line x1="50" y1="50" x2="91" y2="75" stroke="#60a5fa" strokeWidth="0.5" />
@@ -127,7 +129,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-
     </section>
   );
 }
