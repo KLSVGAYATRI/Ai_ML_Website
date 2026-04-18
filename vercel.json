@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm --dir artifacts/api-server exec node ./build.mjs",
+  "outputDirectory": "artifacts/api-server/dist"
+}
