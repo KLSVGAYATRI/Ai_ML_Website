@@ -1,12 +1,12 @@
 import React from "react";
 
 const companies = [
-  { name: "Mouri Tech", color: "bg-blue-50 border-blue-200 text-blue-800" },
-  { name: "Amzure Technologies", color: "bg-cyan-50 border-cyan-200 text-cyan-800" },
-  { name: "Absolin", color: "bg-indigo-50 border-indigo-200 text-indigo-800" },
-  { name: "Symbiosis", color: "bg-purple-50 border-purple-200 text-purple-800" },
-  { name: "Excel Global Solutions", color: "bg-green-50 border-green-200 text-green-800" },
-  { name: "Spruko Technologies", color: "bg-orange-50 border-orange-200 text-orange-800" },
+  { name: "Mouri Tech", color: "bg-blue-50 border-blue-200 text-blue-800", logo: "/logos/mouri-tech.png" },
+  { name: "Amzure Technologies", color: "bg-cyan-50 border-cyan-200 text-cyan-800", logo: "/logos/amzure.png" },
+  { name: "Absolin", color: "bg-indigo-50 border-indigo-200 text-indigo-800", logo: "/logos/absolin.png" },
+  { name: "Symbiosis", color: "bg-purple-50 border-purple-200 text-purple-800", logo: "/logos/symbiosis.png" },
+  { name: "Excel Global Solutions", color: "bg-green-50 border-green-200 text-green-800", logo: "/logos/excel-global.png" },
+  { name: "Spruko Technologies", color: "bg-orange-50 border-orange-200 text-orange-800", logo: "/logos/spruko.png" },
 ];
 
 export default function CompaniesSection() {
@@ -42,9 +42,13 @@ export default function CompaniesSection() {
         {companies.map((company, i) => (
           <div
             key={i}
-            className={`rounded-xl border px-4 py-5 text-center shadow-sm ${company.color} hover:shadow-md transition-shadow`}
+            className={`rounded-xl border px-4 py-5 text-center shadow-sm ${company.color} hover:shadow-md transition-shadow flex flex-col items-center gap-2`}
           >
-            <div className="text-2xl font-extrabold mb-1">{company.name.charAt(0)}</div>
+            <img
+              src={company.logo}
+              alt={company.name}
+              className="h-10 w-auto object-contain"
+            />
             <div className="text-xs font-semibold leading-snug">{company.name}</div>
           </div>
         ))}
