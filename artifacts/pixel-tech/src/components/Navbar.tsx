@@ -44,18 +44,29 @@ export default function Navbar({ onApply }: Props) {
         {/* Logo */}
         <button
           onClick={() => scrollTo("#hero")}
-          className="flex items-center gap-2.5 focus:outline-none"
+          className="flex items-center gap-3 focus:outline-none"
         >
-          <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-md">
-            P
+          <img
+            src="/logo.ico"
+            alt="PixelWind logo"
+            className="w-8 h-8 rounded-lg bg-white/10 shadow-sm ring-1 ring-white/10"
+          />
+          <div className="flex flex-col leading-tight text-left">
+            <span
+              className={`font-semibold text-base tracking-tight transition-colors ${
+                scrolled ? "text-slate-900" : "text-white"
+              }`}
+            >
+              PixelWind
+            </span>
+            <span
+              className={`text-xs uppercase tracking-[0.28em] transition-colors ${
+                scrolled ? "text-slate-500" : "text-slate-300/80"
+              }`}
+            >
+              AI/ML Internship
+            </span>
           </div>
-          <span
-            className={`font-bold text-base tracking-tight transition-colors ${
-              scrolled ? "text-slate-900" : "text-white"
-            }`}
-          >
-            Pixel Technologies
-          </span>
         </button>
 
         {/* Desktop Nav */}

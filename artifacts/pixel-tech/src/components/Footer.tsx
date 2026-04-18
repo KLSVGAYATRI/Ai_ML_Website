@@ -8,9 +8,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-md bg-primary flex items-center justify-center text-white font-bold text-xl">
-                P
-              </div>
+              <img
+                src="/logo.ico"
+                alt="PixelWind logo"
+                className="w-8 h-8 rounded-md bg-white/10 object-contain shadow-sm"
+              />
               <span className="font-bold text-xl tracking-tight text-white">
                 Pixel Technologies
               </span>
@@ -33,9 +35,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-2 text-slate-400">
-              <li>contact@pixeltechnologies.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>100 Innovation Drive,<br/>Tech Park, CA 94043</li>
+              <li>pixeltechnology@gmail.com</li>
+              <li>+91 9398929970</li>
+              <li>4th foor,Potluri classic, beside Sun international, Dwarakanagar, Visakhapatnam-530016</li>
             </ul>
           </div>
         </div>
