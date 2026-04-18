@@ -31,7 +31,7 @@ export default function Hero({ onApply }: Props) {
             <span className="text-blue-300 text-sm font-medium">Now Accepting Applications</span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
             Internship in<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               Artificial Intelligence
