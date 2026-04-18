@@ -5,14 +5,14 @@ import type { IncomingMessage, ServerResponse } from "http";
 import router from "./routes";
 import { logger } from "./lib/logger";
 
-const pinoHttp: any =
-  (pinoHttpModule as any).default ??
+const pinoHttp = ((pinoHttpModule as any).default ??
   (pinoHttpModule as any).pinoHttp ??
-  pinoHttpModule;
+  pinoHttpModule) as any;
 
 const app: Express = express();
 
 app.use(
+  // @ts-ignore pino-http may export a callable default or CJS factory
   pinoHttp({
     logger,
     serializers: {
